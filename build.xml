@@ -1,0 +1,44 @@
+<project name="AStar" default="main" basedir=".">
+  <!-- Sets variables which can later be used. -->
+  <!-- The value of a property is accessed via ${} -->
+  <property name="src.dir" location="src" />
+  <property name="build.dir" location="bin" />
+  <property name="dist.dir" location="dist" />
+
+  <presetdef name="javac">
+    <javac includeantruntime="false"/>
+  </presetdef>
+
+  <!-- Deletes the existing build, and dist directory-->
+  <target name="clean">
+    <delete dir="${build.dir}" />
+    <delete dir="${dist.dir}" />
+  </target>
+
+  <!-- Creates the  build, and dist directory-->
+  <target name="makedir">
+    <mkdir dir="${build.dir}" />
+    <mkdir dir="${dist.dir}" />
+  </target>
+
+  <!-- Compiles the java code (including the usage of library for JUnit -->
+  <target name="compile" depends="clean, makedir">
+    <javac srcdir="${src.dir}" destdir="${build.dir}">
+    </javac>
+
+  </target>
+
+  <!--Creates the deployable jar file  -->
+  <target name="jar" depends="compile">
+    <jar destfile="${dist.dir}\Assignment2.jar" basedir="${build.dir}">
+      <manifest>
+        <attribute name="AStarAlgorithm_Main-Class" value="AStarAlgorithm_Main" />
+      </manifest>
+    </jar>
+  </target>
+
+  <target name="main" depends="compile, jar">
+    <description>AStarAlgorithm_Main target</description>
+  </target>
+
+</project> 
