@@ -10,8 +10,14 @@ These project has been tested using two files that are In the root folder of thi
 1.2. Extract a downloaded zip file to your local disk using any of your zip extraction tool.
 1.3. Open Intellij Idea 13.1.3 IDE.
 1.4. Navigate to 'File' > 'Import Project'.
-1.5. Navigate to the location where you extracted the above mentioned zip file and click 'Ok'.
-1.6. Click 'Next' on all dialogs that will appear till 'Finish'
+1.5. Navigate to the location where you extracted the above mentioned zip file
+
+(NOTE: MAKE SURE TO SELECT THE 'ROOT' FOLDER OF THIS PROJECT, *EXTRACTION TOOLS MAY CREATE A FOLDER WITH THE SAME NAME
+AS THE PROJECT ROOT FOLDER NAME, SELECTING THE FOLDER ABOVE THE ROOT FOLDER OF THE PROJECT MAY CAUSE THIS PROJECT TO
+FAIL LOCATING txt FILES THAT ARE WITHIN ITS ROOT FOLDER, RESULTING IN ERRORS)
+
+1.6. After the correct root folder of the project is selected then click 'Ok'.
+1.7. Click 'Next' on all dialogs that will appear till 'Finish'
 
 2. Running the project:
 
@@ -28,8 +34,8 @@ TO switch between the large_map.txt and Example_map.txt you will need to change 
 2.1. Running the project on Application configuration
 
 2.1.1. Click 'Run' from the menu and navigate to 'Edit Configurations'.
-2.1.2. Select 'Application' from the left pane of the run configuration window.
-2.1.3. Under 'Configuration' tab on the right hand side of the window, make sure the 'Main class' is
+2.1.2. Select add/+ at the top left corner and click 'Application' from the left pane of the run configuration window.
+2.1.3. Under 'Configuration' tab on the right hand side of the window, Type any name next to 'Name' and  make sure to browse and set the 'Main class' to
  'AStarAlgorithm_Main'
 2.1.4. Finally click 'run' at the bottom of the window
 2.1.5. After a successful run, an output file will be created under project explorer pane, in a project's root folder
@@ -40,8 +46,8 @@ A_Star Java\large_map_OUTPUT.txt and it can be directly opened to view its conte
 2.2.1. Create a folder under c: drive named 'Astar'
 2.2.2. Copy your 'large_map.txt' from the project's Test_Maps folder to the above created folder.
 2.2.3. In Intellij, click 'Run' from the menu and navigate to 'Edit Configurations'.
-2.2.4. Select 'Applet' from the left pane of the run configuration window.
-2.2.5. Under 'Configuration' tab on the right hand side of the window, make sure the 'Applet class' is
+2.2.4. Select add/+ at the top left corner and click 'Applet' from the left pane of the run configuration window.
+2.2.5. Under 'Configuration' tab on the right hand side of the window, Type any name next to 'Name' and make sure to browse and set 'Applet class' to
  'AStarAlgorithm_Main'
 2.2.6. Finally click 'run' at the bottom of the window
 2.2.7. After a successful run, an output file will be created in c:\Astar\large_map_OUTPUT.txt
